@@ -1,0 +1,39 @@
+{% extends 'css.html'%}
+
+{% block title %}About{% endblock title %}
+
+
+{% block body %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Welcome
+    <div>
+    <a href="/login" role="button" class="btn btn-primary">Logout</a>
+    <form>
+        <select name="portfolio" id="portfolio">
+          <option  value="# disabled selected">Softy</option>
+          <option  value="contact.html">Family Pack</option>
+        </select>
+        </form>
+        <script>
+          var urlmenu =  document.getElementById('portfolio') ;
+          urlmenu.onchange=function()
+          {
+            var useroption=this.options[this.selectedIndex];
+            if(useroption =this.value !="nothing")
+            {
+                  window.open(useroption.value," Softy Family Pack"," ");
+            }
+          }
+        </script>
+       
+</div>
+</body>
+</html>
+{% endblock body %}
